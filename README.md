@@ -94,7 +94,8 @@
     "[javascriptreact]": {
         "editor.formatOnSave": false
     },
-    // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
+    // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, 
+    turn it off for JS since we are doing it through Eslint already
     "prettier.disableLanguages": [
         "javascript",
         "javascriptreact"
