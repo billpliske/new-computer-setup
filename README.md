@@ -58,6 +58,7 @@
     ]
   }
 }
+
 ```
 
 #### packages you need
@@ -71,7 +72,13 @@
 "devDependencies": {
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
     "prettier": "^2.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "post-commit": "yarn test --watchAll"
+    }
   }
 ```
 
@@ -79,61 +86,72 @@
 
 ````json{
     ///////////////////////////////////
-    // ESLINT KEY SETTINGS
-    ///////////////////////////////////
-    // tell the ESLint plugin to run on save
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true
-    },
-    "editor.formatOnSave": true,
-    "eslint.alwaysShowStatus": true,
-    // turn it off for JS and JSX, we will do this via eslint
-    "[javascript]": {
-        "editor.formatOnSave": false
-    },
-    "[javascriptreact]": {
-        "editor.formatOnSave": false
-    },
-    // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, 
-    turn it off for JS since we are doing it through Eslint already
-    "prettier.disableLanguages": [
-        "javascript",
-        "javascriptreact"
-    ],
-    ///////////////////////////////////
-    ///////////////////////////////////
-    "editor.fontFamily": "Fira Code Regular",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 18,
-    "editor.minimap.enabled": false,
-    "editor.renderControlCharacters": false,
-    "editor.renderIndentGuides": false,
-    "editor.snippetSuggestions": "top",
-    "editor.tabSize": 4,
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-    },
-    "emmet.syntaxProfiles": {
-        "javascript": "javascriptreact"
-    },
-    "files.associations": {
-        "*.js": "javascriptreact"
-    },
-    "files.autoSave": "onFocusChange",
-    "files.trimTrailingWhitespace": true,
-    "html.format.enable": true,
-    "html.format.preserveNewLines": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "javascript.validate.enable": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "material-icon-theme.showUpdateMessage": false,
-    "terminal.integrated.fontFamily": "Delugia Nerd Font",
-    "terminal.integrated.fontSize": 17,
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Atom One Dark",
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.sideBar.location": "left",
+  // ESLINT KEY SETTINGS
+  ///////////////////////////////////
+  // tell the ESLint plugin to run on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  // turn it off for JS and JSX, we will do this via eslint
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
+  "prettier.disableLanguages": [
+    "javascript",
+    "javascriptreact"
+  ],
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": false,
+  "editor.renderIndentGuides": false,
+  "editor.snippetSuggestions": "top",
+  "editor.tabSize": 4,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "javascriptreact"
+  },
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "files.trimTrailingWhitespace": true,
+  "html.format.enable": true,
+  "html.format.preserveNewLines": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "material-icon-theme.showUpdateMessage": false,
+  "terminal.integrated.fontFamily": "DejaVuSansMono NF",
+  "window.zoomLevel": 0,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "left",
+  "editor.semanticHighlighting.enabled": false,
+  "material-icon-theme.activeIconPack": "react",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.cursorStyle": "line",
+  "editor.fontFamily": "Fira Code",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeightBold": "normal",
+  "terminal.integrated.fontWeight": "bold",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.colorTheme": "Atom One Dark",
+  "remote.extensionKind": {
+
+    "pub.name": [
+      "ui"
+    ]
+  }
 }```
 # install vscode extensions
 
